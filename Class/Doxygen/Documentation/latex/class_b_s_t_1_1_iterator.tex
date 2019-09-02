@@ -1,0 +1,132 @@
+\hypertarget{class_b_s_t_1_1_iterator}{}\doxysection{B\+ST$<$ key, value, comparator $>$\+::Iterator Class Reference}
+\label{class_b_s_t_1_1_iterator}\index{BST$<$ key, value, comparator $>$::Iterator@{BST$<$ key, value, comparator $>$::Iterator}}
+
+
+\mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} uses struct node of \mbox{\hyperlink{class_b_s_t_a88de1603a81df3c011417d5712370a40}{B\+S\+T()}} class. ~\newline
+  
+
+
+
+
+{\ttfamily \#include $<$B\+S\+T.\+h$>$}
+
+Inheritance diagram for B\+ST$<$ key, value, comparator $>$\+::Iterator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_b_s_t_1_1_iterator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_s_t_1_1_iterator_aac03881992b6d28825d0059e827b69dd}{Iterator}} (node $\ast$n)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} is constructed with a raw pointer to the current node. \end{DoxyCompactList}\item 
+std\+::pair$<$ const key, value $>$ \& \mbox{\hyperlink{class_b_s_t_1_1_iterator_a87812b8e2f39fe04b260745b18d16c50}{operator$\ast$}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_b_s_t_1_1_iterator_a87812b8e2f39fe04b260745b18d16c50}{operator$\ast$()}} is overloaded to return reference to the data-\/pair. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} \& \mbox{\hyperlink{class_b_s_t_1_1_iterator_ade7059e3b8bd07bc16f5460aa65ad1e4}{operator++}} ()
+\begin{DoxyCompactList}\small\item\em Pre-\/increment \mbox{\hyperlink{class_b_s_t_1_1_iterator_ade7059e3b8bd07bc16f5460aa65ad1e4}{operator++()}} is overloaded to move to the next right node and if that is not possible to keep moving up in the tree until the next largest key is encountered. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_b_s_t_1_1_iterator_ad9500121edb58ecee62dea86197bd9d3}{operator++}} (int)
+\begin{DoxyCompactList}\small\item\em Post-\/increment \mbox{\hyperlink{class_b_s_t_1_1_iterator_ad9500121edb58ecee62dea86197bd9d3}{operator++(int)}} is enabled. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_b_s_t_1_1_iterator_ac63f621cbffb707a55d5d74b16d073d5}{operator==}} (const \mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} \&other)
+\begin{DoxyCompactList}\small\item\em Operator for equality check between two iterators. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_b_s_t_1_1_iterator_affa93a3578dfeba2d30169a55d2b5812}{operator!=}} (const \mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} \&other)
+\begin{DoxyCompactList}\small\item\em Operator for equality check between two iterators. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class key, class value, class comparator = decltype(\& Functor$<$const key,value$>$)$>$\newline
+class B\+S\+T$<$ key, value, comparator $>$\+::\+Iterator}
+
+\mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} uses struct node of \mbox{\hyperlink{class_b_s_t_a88de1603a81df3c011417d5712370a40}{B\+S\+T()}} class. ~\newline
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_b_s_t_1_1_iterator_aac03881992b6d28825d0059e827b69dd}\label{class_b_s_t_1_1_iterator_aac03881992b6d28825d0059e827b69dd}} 
+\index{BST$<$ key, value, comparator $>$::Iterator@{BST$<$ key, value, comparator $>$::Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!BST$<$ key, value, comparator $>$::Iterator@{BST$<$ key, value, comparator $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}}
+{\footnotesize\ttfamily template$<$class key, class value, class comparator = decltype(\& Functor$<$const key,value$>$)$>$ \\
+\mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::Iterator\+::\+Iterator (\begin{DoxyParamCaption}\item[{node $\ast$}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} is constructed with a raw pointer to the current node. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_s_t_1_1_iterator_affa93a3578dfeba2d30169a55d2b5812}\label{class_b_s_t_1_1_iterator_affa93a3578dfeba2d30169a55d2b5812}} 
+\index{BST$<$ key, value, comparator $>$::Iterator@{BST$<$ key, value, comparator $>$::Iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!BST$<$ key, value, comparator $>$::Iterator@{BST$<$ key, value, comparator $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$class key, class value, class comparator = decltype(\& Functor$<$const key,value$>$)$>$ \\
+bool \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::Iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operator for equality check between two iterators. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em bool} & true if not equal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_b_s_t_1_1_iterator_a87812b8e2f39fe04b260745b18d16c50}\label{class_b_s_t_1_1_iterator_a87812b8e2f39fe04b260745b18d16c50}} 
+\index{BST$<$ key, value, comparator $>$::Iterator@{BST$<$ key, value, comparator $>$::Iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!BST$<$ key, value, comparator $>$::Iterator@{BST$<$ key, value, comparator $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$class key, class value, class comparator = decltype(\& Functor$<$const key,value$>$)$>$ \\
+std\+::pair$<$const key, value$>$\& \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::Iterator\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_b_s_t_1_1_iterator_a87812b8e2f39fe04b260745b18d16c50}{operator$\ast$()}} is overloaded to return reference to the data-\/pair. 
+
+\mbox{\Hypertarget{class_b_s_t_1_1_iterator_ade7059e3b8bd07bc16f5460aa65ad1e4}\label{class_b_s_t_1_1_iterator_ade7059e3b8bd07bc16f5460aa65ad1e4}} 
+\index{BST$<$ key, value, comparator $>$::Iterator@{BST$<$ key, value, comparator $>$::Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!BST$<$ key, value, comparator $>$::Iterator@{BST$<$ key, value, comparator $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class key, class value, class comparator = decltype(\& Functor$<$const key,value$>$)$>$ \\
+\mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}}\& \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::Iterator\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pre-\/increment \mbox{\hyperlink{class_b_s_t_1_1_iterator_ade7059e3b8bd07bc16f5460aa65ad1e4}{operator++()}} is overloaded to move to the next right node and if that is not possible to keep moving up in the tree until the next largest key is encountered. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em $\ast$this} & \mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} reference of current node. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_b_s_t_1_1_iterator_ad9500121edb58ecee62dea86197bd9d3}\label{class_b_s_t_1_1_iterator_ad9500121edb58ecee62dea86197bd9d3}} 
+\index{BST$<$ key, value, comparator $>$::Iterator@{BST$<$ key, value, comparator $>$::Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!BST$<$ key, value, comparator $>$::Iterator@{BST$<$ key, value, comparator $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class key, class value, class comparator = decltype(\& Functor$<$const key,value$>$)$>$ \\
+\mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::Iterator\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Post-\/increment \mbox{\hyperlink{class_b_s_t_1_1_iterator_ad9500121edb58ecee62dea86197bd9d3}{operator++(int)}} is enabled. 
+
+\mbox{\Hypertarget{class_b_s_t_1_1_iterator_ac63f621cbffb707a55d5d74b16d073d5}\label{class_b_s_t_1_1_iterator_ac63f621cbffb707a55d5d74b16d073d5}} 
+\index{BST$<$ key, value, comparator $>$::Iterator@{BST$<$ key, value, comparator $>$::Iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!BST$<$ key, value, comparator $>$::Iterator@{BST$<$ key, value, comparator $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$class key, class value, class comparator = decltype(\& Functor$<$const key,value$>$)$>$ \\
+bool \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::Iterator\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operator for equality check between two iterators. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em bool} & true if equal. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Ph\+D course S\+I\+S\+S\+A-\/\+Physics and Chemistry of Biological Systems/\+Modules/\+Advanced Programming/\+Exam/\+C++/\+Class/\+Doxygen/\mbox{\hyperlink{_b_s_t_8h}{B\+S\+T.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,51 @@
+\hypertarget{_performance_8cpp}{}\doxysection{D\+:/\+PhD course S\+I\+S\+S\+A-\/\+Physics and Chemistry of Biological Systems/\+Modules/\+Advanced Programming/\+Exam/\+C++/\+Class/\+Doxygen/\+Performance.cpp File Reference}
+\label{_performance_8cpp}\index{D:/PhD course SISSA-\/Physics and Chemistry of Biological Systems/Modules/Advanced Programming/Exam/C++/Class/Doxygen/Performance.cpp@{D:/PhD course SISSA-\/Physics and Chemistry of Biological Systems/Modules/Advanced Programming/Exam/C++/Class/Doxygen/Performance.cpp}}
+{\ttfamily \#include \char`\"{}B\+S\+T\+\_\+performance.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_performance_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The file contains a procedure to investigate the performance of the lookup in unbalanced and balanced \mbox{\hyperlink{class_b_s_t}{B\+S\+T()}} via member function find() compared to std\+::map. Average lookup-\/times are measured using std\+::chrono\+::high\+\_\+resolution\+\_\+clock and normalised with respect to the number of nodes present. The performance is tested for node numbers in the range of 10000 to 10000000. The output is a Average\+Lookup\+Times.\+txt which is containing lookup-\/times in nanoseconds in the format \textquotesingle{}std\+::map \+: \mbox{\hyperlink{class_b_s_t}{B\+S\+T(unbalanced)}} \+: \mbox{\hyperlink{class_b_s_t}{B\+S\+T(balanced)}}\textquotesingle{}. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_performance_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_performance_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Performance.cpp@{Performance.cpp}!main@{main}}
+\index{main@{main}!Performance.cpp@{Performance.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Vector to store the lookup-\/times is constructed. And the node range is defined.
+
+Vector for keys is constructed and contains keys in the node range.
+
+Vector for input keys is constructed and contains the keys, but in a random order.
+
+Vector for lookup keys is constructed and contains the keys, but in randomised lookup order.
+
+A std\+::map is populated with the input keys.
+
+The time to lookup all keys in the randomised lookup order is measured in nanoseconds.
+
+Average lookup-\/times are stored.
+
+A \mbox{\hyperlink{class_b_s_t}{B\+S\+T()}} is populated with the input keys.
+
+The time to lookup all keys in the randomised lookup order is measured in nanoseconds.
+
+Average lookup-\/times are stored.
+
+The unbalanced \mbox{\hyperlink{class_b_s_t}{B\+S\+T()}} is copied and balanced afterwards.
+
+The time to lookup all keys in the randomised lookup order is measured in nanoseconds.
+
+Average lookup-\/times are stored.
+
+The output-\/file is generated.

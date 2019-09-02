@@ -1,0 +1,68 @@
+\hypertarget{_b_s_t_8h}{}\doxysection{D\+:/\+PhD course S\+I\+S\+S\+A-\/\+Physics and Chemistry of Biological Systems/\+Modules/\+Advanced Programming/\+Exam/\+C++/\+Class/\+Doxygen/\+B\+ST.h File Reference}
+\label{_b_s_t_8h}\index{D:/PhD course SISSA-\/Physics and Chemistry of Biological Systems/Modules/Advanced Programming/Exam/C++/Class/Doxygen/BST.h@{D:/PhD course SISSA-\/Physics and Chemistry of Biological Systems/Modules/Advanced Programming/Exam/C++/Class/Doxygen/BST.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_b_s_t}{B\+S\+T$<$ key, value, comparator $>$}}
+\item 
+class \mbox{\hyperlink{class_b_s_t_1_1_iterator}{B\+S\+T$<$ key, value, comparator $>$\+::\+Iterator}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} uses struct node of \mbox{\hyperlink{class_b_s_t_a88de1603a81df3c011417d5712370a40}{B\+S\+T()}} class. ~\newline
+ \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_b_s_t_1_1_const_iterator}{B\+S\+T$<$ key, value, comparator $>$\+::\+Const\+Iterator}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_b_s_t_1_1_const_iterator}{Const\+Iterator}} is using the functionality of the \mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} class, but is preventing the accessed elements to be manipulated by returning \mbox{\hyperlink{class_b_s_t_1_1_const_iterator_ab5ddd11eba4590a965fc5052f8c4bbaa}{operator$\ast$() const}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class key , class value $>$ }\\int \mbox{\hyperlink{_b_s_t_8h_a3ada4d5a3d6a059a557fa63694ef0dc4}{Functor}} (std\+::pair$<$ const key, value $>$ \&lhs, std\+::pair$<$ const key, value $>$ \&rhs)
+\item 
+{\footnotesize template$<$class key , class value , class comparator $>$ }\\std\+::ostream \& \mbox{\hyperlink{_b_s_t_8h_a1b4e064883537aa3dd88c8be7e0328d4}{operator$<$$<$}} (std\+::ostream \&os, \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$ \&l)
+\begin{DoxyCompactList}\small\item\em Override to allow printing of the \mbox{\hyperlink{class_b_s_t}{B\+ST}} in the format \textquotesingle{}key \+: value\textquotesingle{}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class key , class value , class comparator $>$ }\\std\+::ostream \& \mbox{\hyperlink{_b_s_t_8h_a0a8687b0b7a5e94998639747e8b5e87c}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$ \&l)
+\begin{DoxyCompactList}\small\item\em Override to allow printing of a const \mbox{\hyperlink{class_b_s_t}{B\+ST}} in the format \textquotesingle{}key \+: value\textquotesingle{} via a Const\+Iterator handling. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The file contains the entire functionality of the \mbox{\hyperlink{class_b_s_t}{B\+ST}}. For demonstration purposes additional output stream statements can be enabled. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_b_s_t_8h_a3ada4d5a3d6a059a557fa63694ef0dc4}\label{_b_s_t_8h_a3ada4d5a3d6a059a557fa63694ef0dc4}} 
+\index{BST.h@{BST.h}!Functor@{Functor}}
+\index{Functor@{Functor}!BST.h@{BST.h}}
+\doxysubsubsection{\texorpdfstring{Functor()}{Functor()}}
+{\footnotesize\ttfamily template$<$class key , class value $>$ \\
+int Functor (\begin{DoxyParamCaption}\item[{std\+::pair$<$ const key, value $>$ \&}]{lhs,  }\item[{std\+::pair$<$ const key, value $>$ \&}]{rhs }\end{DoxyParamCaption})}
+
+A templated functor is setup for comparison taking references to two std\+::pairs 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em lhs,rhs} & Reference to the two data pairs that shall be compared. \\
+\hline
+\mbox{\texttt{ out}}  & {\em int} & 0 if larger, 1 if smaller and 2 if equal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_b_s_t_8h_a1b4e064883537aa3dd88c8be7e0328d4}\label{_b_s_t_8h_a1b4e064883537aa3dd88c8be7e0328d4}} 
+\index{BST.h@{BST.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!BST.h@{BST.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class key , class value , class comparator $>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{\mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$ \&}]{l }\end{DoxyParamCaption})}
+
+
+
+Override to allow printing of the \mbox{\hyperlink{class_b_s_t}{B\+ST}} in the format \textquotesingle{}key \+: value\textquotesingle{}. 
+
+\mbox{\Hypertarget{_b_s_t_8h_a0a8687b0b7a5e94998639747e8b5e87c}\label{_b_s_t_8h_a0a8687b0b7a5e94998639747e8b5e87c}} 
+\index{BST.h@{BST.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!BST.h@{BST.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class key , class value , class comparator $>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$ \&}]{l }\end{DoxyParamCaption})}
+
+
+
+Override to allow printing of a const \mbox{\hyperlink{class_b_s_t}{B\+ST}} in the format \textquotesingle{}key \+: value\textquotesingle{} via a Const\+Iterator handling. 
+

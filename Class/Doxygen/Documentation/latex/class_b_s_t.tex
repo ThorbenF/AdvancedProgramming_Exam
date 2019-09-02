@@ -1,0 +1,292 @@
+\hypertarget{class_b_s_t}{}\doxysection{B\+ST$<$ key, value, comparator $>$ Class Template Reference}
+\label{class_b_s_t}\index{BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}}
+
+
+{\ttfamily \#include $<$B\+S\+T.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_b_s_t_1_1_const_iterator}{Const\+Iterator}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_b_s_t_1_1_const_iterator}{Const\+Iterator}} is using the functionality of the \mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} class, but is preventing the accessed elements to be manipulated by returning \mbox{\hyperlink{class_b_s_t_1_1_const_iterator_ab5ddd11eba4590a965fc5052f8c4bbaa}{operator$\ast$() const}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} uses struct node of \mbox{\hyperlink{class_b_s_t_a88de1603a81df3c011417d5712370a40}{B\+S\+T()}} class. ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_s_t_a88de1603a81df3c011417d5712370a40}{B\+ST}} ()
+\begin{DoxyCompactList}\small\item\em Each \mbox{\hyperlink{class_b_s_t}{B\+ST}} class is constructed with a smart pointer to the root node and a comparison functor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_b_s_t_aee31904f12c72b6b748b46f7db78521e}{begin}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} to the node with lowest key. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_b_s_t_ad831fe01fa6994bcaa422b078bfc56b1}{end}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} Returns nullptr. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_s_t_1_1_const_iterator}{Const\+Iterator}} \mbox{\hyperlink{class_b_s_t_aa1b593873a9d724bc9fa5e9de17c4fb8}{cbegin}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_b_s_t_1_1_const_iterator}{Const\+Iterator}} to the node with lowest key. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_s_t_1_1_const_iterator}{Const\+Iterator}} \mbox{\hyperlink{class_b_s_t_a8dc09f735bc42e8183492837a0f00620}{cend}} () const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_b_s_t_1_1_const_iterator}{Const\+Iterator}} Returns nullptr. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_s_t_a538f996f02dc7057947d2d527d25a580}{insert}} (const key k, value v)
+\begin{DoxyCompactList}\small\item\em Making use of the comparison functor allows adding a pair of key and value as soon as a nullptr is encountered in the next smart pointer of the current node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_s_t_a568add02af128e84894274c14dff723c}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Resets the root-\/node back to nullptr. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_s_t_a2645be2b51a9f23dd6a7d413d37118d0}{balance}} ()
+\begin{DoxyCompactList}\small\item\em Not in-\/place balancing of the tree in a recursive manner. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_s_t_1_1_const_iterator}{Const\+Iterator}} \mbox{\hyperlink{class_b_s_t_a981561762ee1793511d351735c1b60f3}{find}} (const key k) const
+\begin{DoxyCompactList}\small\item\em Searches for a given key. \end{DoxyCompactList}\item 
+value \& \mbox{\hyperlink{class_b_s_t_a71484110f50915eb23a1d6b5dccd753f}{operator\mbox{[}$\,$\mbox{]}}} (const key \&k)
+\begin{DoxyCompactList}\small\item\em Operator allowing value access via key. \end{DoxyCompactList}\item 
+const value \& \mbox{\hyperlink{class_b_s_t_a309e1fe7dda03eff31910ae86b574fa5}{operator\mbox{[}$\,$\mbox{]}}} (const key \&k) const
+\begin{DoxyCompactList}\small\item\em Const operator allowing value access via key. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_s_t_aed87c6c0a8fa750345ff14cb548a2636}{B\+ST}} (const \mbox{\hyperlink{class_b_s_t}{B\+ST}} \&bst\+\_\+rhs)
+\begin{DoxyCompactList}\small\item\em Copy constructor which constructs a deepcopy with new root-\/node following the original node structure in a recursive manner and inserting new nodes with the same std\+::pair as the original. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_s_t}{B\+ST}} \& \mbox{\hyperlink{class_b_s_t_a51d840cd54ab6211c05c9d1b686ab5a4}{operator=}} (const \mbox{\hyperlink{class_b_s_t}{B\+ST}} \&bst\+\_\+rhs)
+\begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_s_t_a2cfb59cd0cf20a974b13acd609cf91f4}{B\+ST}} (\mbox{\hyperlink{class_b_s_t}{B\+ST}} \&\&bst\+\_\+rhs)
+\begin{DoxyCompactList}\small\item\em Move constructor which allows that the ownership of the root-\/node is transferred to the lvalue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_s_t}{B\+ST}} \& \mbox{\hyperlink{class_b_s_t_abc62eff481fddb7ed8511acf783502a1}{operator=}} (\mbox{\hyperlink{class_b_s_t}{B\+ST}} \&\&bst\+\_\+rhs)
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_b_s_t_a26ff8ae550b68b2ad9c32585698e5a20}{$\sim$\+B\+ST}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class key, class value, class comparator = decltype(\& Functor$<$const key,value$>$)$>$\newline
+class B\+S\+T$<$ key, value, comparator $>$}
+
+The \mbox{\hyperlink{class_b_s_t}{B\+ST}} class is templated on the type of the const key and the type of the value associated with it allowing for variability in input data and the Functor which template type is derived via decltype(). Nodes are realised as nested struct containing data, smart pointers to the next left and right node as well as a pointer to the local root. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_b_s_t_a88de1603a81df3c011417d5712370a40}\label{class_b_s_t_a88de1603a81df3c011417d5712370a40}} 
+\index{BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}!BST@{BST}}
+\index{BST@{BST}!BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}}
+\doxysubsubsection{\texorpdfstring{BST()}{BST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class key, class value, class comparator = decltype(\& Functor$<$const key,value$>$)$>$ \\
+\mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::\mbox{\hyperlink{class_b_s_t}{B\+ST}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Each \mbox{\hyperlink{class_b_s_t}{B\+ST}} class is constructed with a smart pointer to the root node and a comparison functor. 
+
+\mbox{\Hypertarget{class_b_s_t_aed87c6c0a8fa750345ff14cb548a2636}\label{class_b_s_t_aed87c6c0a8fa750345ff14cb548a2636}} 
+\index{BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}!BST@{BST}}
+\index{BST@{BST}!BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}}
+\doxysubsubsection{\texorpdfstring{BST()}{BST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class key , class value , class comparator $>$ \\
+\mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::\mbox{\hyperlink{class_b_s_t}{B\+ST}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$ \&}]{bst\+\_\+rhs }\end{DoxyParamCaption})}
+
+
+
+Copy constructor which constructs a deepcopy with new root-\/node following the original node structure in a recursive manner and inserting new nodes with the same std\+::pair as the original. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bst\+\_\+rhs} & \mbox{\hyperlink{class_b_s_t}{B\+ST}} object to copy from.\\
+\hline
+\end{DoxyParams}
+a root-\/node and a functor are initialised. The private member function deepcopy\+\_\+recursive(), which is taking a reference to the current node of the original tree, is used to build a new tree with the same components as the original by using \mbox{\hyperlink{class_b_s_t_a538f996f02dc7057947d2d527d25a580}{insert()}}. First the entire left tree side is copied recursively until a nullptr is encountered in rhs tree and then the same is repeated recursively for the right half of the tree. \mbox{\Hypertarget{class_b_s_t_a2cfb59cd0cf20a974b13acd609cf91f4}\label{class_b_s_t_a2cfb59cd0cf20a974b13acd609cf91f4}} 
+\index{BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}!BST@{BST}}
+\index{BST@{BST}!BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}}
+\doxysubsubsection{\texorpdfstring{BST()}{BST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class key , class value , class comparator $>$ \\
+\mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::\mbox{\hyperlink{class_b_s_t}{B\+ST}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$ \&\&}]{bst\+\_\+rhs }\end{DoxyParamCaption})}
+
+
+
+Move constructor which allows that the ownership of the root-\/node is transferred to the lvalue. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bst\+\_\+rhs} & \mbox{\hyperlink{class_b_s_t}{B\+ST}} object to acquire ownership from.\\
+\hline
+\end{DoxyParams}
+Takes rvalue reference \&\& and uses std\+::move() to obtain ownership over the rhs root-\/node. \mbox{\Hypertarget{class_b_s_t_a26ff8ae550b68b2ad9c32585698e5a20}\label{class_b_s_t_a26ff8ae550b68b2ad9c32585698e5a20}} 
+\index{BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}!````~BST@{$\sim$BST}}
+\index{````~BST@{$\sim$BST}!BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$BST()}{~BST()}}
+{\footnotesize\ttfamily template$<$class key, class value, class comparator = decltype(\& Functor$<$const key,value$>$)$>$ \\
+\mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::$\sim$\mbox{\hyperlink{class_b_s_t}{B\+ST}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_s_t_a2645be2b51a9f23dd6a7d413d37118d0}\label{class_b_s_t_a2645be2b51a9f23dd6a7d413d37118d0}} 
+\index{BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}!balance@{balance}}
+\index{balance@{balance}!BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}}
+\doxysubsubsection{\texorpdfstring{balance()}{balance()}}
+{\footnotesize\ttfamily template$<$class key , class value , class comparator $>$ \\
+void \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Not in-\/place balancing of the tree in a recursive manner. 
+
+Upon calling the function stores all std\+:pairs contained in the tree inside a std\+::vector in ascending order according to key. The tree is set to empty via \mbox{\hyperlink{class_b_s_t_a568add02af128e84894274c14dff723c}{clear()}} and rebuild in a recursive manner using the private member function balance\+\_\+recursive(std\+::vector$<$std\+::pair$<$const key, value$>$ $>$\& vec, std\+::size\+\_\+t start, std\+::size\+\_\+t end). This function recursively determines a median and inserts its data-\/pair back into the tree via \mbox{\hyperlink{class_b_s_t_a538f996f02dc7057947d2d527d25a580}{insert()}}. Initially the entire left side of the tree is rebuild with the call to balance\+\_\+recursive(). As soon as this half of the vector is down to a single data-\/pair the same procedure is carried out for the right side of the vector. \mbox{\Hypertarget{class_b_s_t_aee31904f12c72b6b748b46f7db78521e}\label{class_b_s_t_aee31904f12c72b6b748b46f7db78521e}} 
+\index{BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}!begin@{begin}}
+\index{begin@{begin}!BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$class key , class value , class comparator $>$ \\
+\mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::\mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} to the node with lowest key. 
+
+\mbox{\Hypertarget{class_b_s_t_aa1b593873a9d724bc9fa5e9de17c4fb8}\label{class_b_s_t_aa1b593873a9d724bc9fa5e9de17c4fb8}} 
+\index{BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}!cbegin@{cbegin}}
+\index{cbegin@{cbegin}!BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}}
+\doxysubsubsection{\texorpdfstring{cbegin()}{cbegin()}}
+{\footnotesize\ttfamily template$<$class key , class value , class comparator $>$ \\
+\mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::\mbox{\hyperlink{class_b_s_t_1_1_const_iterator}{Const\+Iterator}} \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::cbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\mbox{\hyperlink{class_b_s_t_1_1_const_iterator}{Const\+Iterator}} to the node with lowest key. 
+
+\mbox{\Hypertarget{class_b_s_t_a8dc09f735bc42e8183492837a0f00620}\label{class_b_s_t_a8dc09f735bc42e8183492837a0f00620}} 
+\index{BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}!cend@{cend}}
+\index{cend@{cend}!BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}}
+\doxysubsubsection{\texorpdfstring{cend()}{cend()}}
+{\footnotesize\ttfamily template$<$class key, class value, class comparator = decltype(\& Functor$<$const key,value$>$)$>$ \\
+\mbox{\hyperlink{class_b_s_t_1_1_const_iterator}{Const\+Iterator}} \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::cend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_b_s_t_1_1_const_iterator}{Const\+Iterator}} Returns nullptr. 
+
+\mbox{\Hypertarget{class_b_s_t_a568add02af128e84894274c14dff723c}\label{class_b_s_t_a568add02af128e84894274c14dff723c}} 
+\index{BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}!clear@{clear}}
+\index{clear@{clear}!BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$class key , class value , class comparator $>$ \\
+void \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets the root-\/node back to nullptr. 
+
+\mbox{\Hypertarget{class_b_s_t_ad831fe01fa6994bcaa422b078bfc56b1}\label{class_b_s_t_ad831fe01fa6994bcaa422b078bfc56b1}} 
+\index{BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}!end@{end}}
+\index{end@{end}!BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$class key, class value, class comparator = decltype(\& Functor$<$const key,value$>$)$>$ \\
+\mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} Returns nullptr. 
+
+\mbox{\Hypertarget{class_b_s_t_a981561762ee1793511d351735c1b60f3}\label{class_b_s_t_a981561762ee1793511d351735c1b60f3}} 
+\index{BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}!find@{find}}
+\index{find@{find}!BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily template$<$class key , class value , class comparator $>$ \\
+\mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::\mbox{\hyperlink{class_b_s_t_1_1_const_iterator}{Const\+Iterator}} \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::find (\begin{DoxyParamCaption}\item[{const key}]{k }\end{DoxyParamCaption}) const}
+
+
+
+Searches for a given key. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em k} & target key. \\
+\hline
+\mbox{\texttt{ out}}  & {\em \mbox{\hyperlink{class_b_s_t_1_1_const_iterator}{Const\+Iterator}}} & to the corresponding node.\\
+\hline
+\end{DoxyParams}
+The search starts with a temporary raw pointer to the root-\/node and continues until either the target k is found and returned as \mbox{\hyperlink{class_b_s_t_1_1_const_iterator}{Const\+Iterator}} to the corresponding nodes or a nullptr is met and returned. \mbox{\Hypertarget{class_b_s_t_a538f996f02dc7057947d2d527d25a580}\label{class_b_s_t_a538f996f02dc7057947d2d527d25a580}} 
+\index{BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}!insert@{insert}}
+\index{insert@{insert}!BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$class key , class value , class comparator $>$ \\
+void \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::insert (\begin{DoxyParamCaption}\item[{const key}]{k,  }\item[{value}]{v }\end{DoxyParamCaption})}
+
+
+
+Making use of the comparison functor allows adding a pair of key and value as soon as a nullptr is encountered in the next smart pointer of the current node. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em k,v} & arbitrary input key and value.\\
+\hline
+\end{DoxyParams}
+When the tree is empty a first node is constructed and the smart pointer to root-\/node is moved. Adding additional nodes is allowed via a the private member function add\+\_\+node\+\_\+recursive(std\+::pair$<$const key, value$>$ p, node$\ast$ current). It uses the functor for comparison and moves along the branches accordingly until a nullptr is encountered. If the key was not existing a new node is contructed and previous left or right smart pointer is moved to the new node. if the key was existing the value is overwritten. \mbox{\Hypertarget{class_b_s_t_abc62eff481fddb7ed8511acf783502a1}\label{class_b_s_t_abc62eff481fddb7ed8511acf783502a1}} 
+\index{BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class key , class value , class comparator $>$ \\
+\mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$ \& \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$ \&\&}]{bst\+\_\+rhs }\end{DoxyParamCaption})}
+
+
+
+Move assignment. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em =bst\+\_\+rhs} & \mbox{\hyperlink{class_b_s_t}{B\+ST}} object to obtain ownership from. \\
+\hline
+\mbox{\texttt{ out}}  & {\em lhs\&} & Reference to lhs \mbox{\hyperlink{class_b_s_t}{B\+ST}} object.\\
+\hline
+\end{DoxyParams}
+Takes rvalue reference \&\& and uses std\+::move() to obtain ownership over the rhs root-\/node. \mbox{\Hypertarget{class_b_s_t_a51d840cd54ab6211c05c9d1b686ab5a4}\label{class_b_s_t_a51d840cd54ab6211c05c9d1b686ab5a4}} 
+\index{BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class key , class value , class comparator $>$ \\
+\mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$ \& \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$ \&}]{bst\+\_\+rhs }\end{DoxyParamCaption})}
+
+
+
+Copy assignment. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em =bst\+\_\+rhs} & \mbox{\hyperlink{class_b_s_t}{B\+ST}} object to copy from. \\
+\hline
+\mbox{\texttt{ out}}  & {\em lhs\&} & Reference to lhs \mbox{\hyperlink{class_b_s_t}{B\+ST}} object which is a deepcopy.\\
+\hline
+\end{DoxyParams}
+First the copy assignement clears the lhs and proceeds like the copy constructor afterwards. It also contains a handling for self assignment. \mbox{\Hypertarget{class_b_s_t_a71484110f50915eb23a1d6b5dccd753f}\label{class_b_s_t_a71484110f50915eb23a1d6b5dccd753f}} 
+\index{BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class key , class value , class comparator $>$ \\
+value \& \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const key \&}]{k }\end{DoxyParamCaption})}
+
+
+
+Operator allowing value access via key. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em k} & target key. \\
+\hline
+\mbox{\texttt{ out}}  & {\em value\&} & reference to the corresponding value.\\
+\hline
+\end{DoxyParams}
+\mbox{\hyperlink{class_b_s_t_a981561762ee1793511d351735c1b60f3}{find()}} is used to search and return the key. If the key can not be found a new key is inserted with value\{\} and returned. \mbox{\Hypertarget{class_b_s_t_a309e1fe7dda03eff31910ae86b574fa5}\label{class_b_s_t_a309e1fe7dda03eff31910ae86b574fa5}} 
+\index{BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!BST$<$ key, value, comparator $>$@{BST$<$ key, value, comparator $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class key , class value , class comparator $>$ \\
+const value \& \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const key \&}]{k }\end{DoxyParamCaption}) const}
+
+
+
+Const operator allowing value access via key. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em k} & target key. \\
+\hline
+\mbox{\texttt{ out}}  & {\em value\&} & constant reference to the corresponding value.\\
+\hline
+\end{DoxyParams}
+\mbox{\hyperlink{class_b_s_t_a981561762ee1793511d351735c1b60f3}{find()}} is also used for the const override. However if the key can not be found a std\+::runtime error is thrown. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Ph\+D course S\+I\+S\+S\+A-\/\+Physics and Chemistry of Biological Systems/\+Modules/\+Advanced Programming/\+Exam/\+C++/\+Class/\+Doxygen/\mbox{\hyperlink{_b_s_t_8h}{B\+S\+T.\+h}}\end{DoxyCompactItemize}

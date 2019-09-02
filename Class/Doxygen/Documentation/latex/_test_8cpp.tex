@@ -1,0 +1,45 @@
+\hypertarget{_test_8cpp}{}\doxysection{D\+:/\+PhD course S\+I\+S\+S\+A-\/\+Physics and Chemistry of Biological Systems/\+Modules/\+Advanced Programming/\+Exam/\+C++/\+Class/\+Doxygen/\+Test.cpp File Reference}
+\label{_test_8cpp}\index{D:/PhD course SISSA-\/Physics and Chemistry of Biological Systems/Modules/Advanced Programming/Exam/C++/Class/Doxygen/Test.cpp@{D:/PhD course SISSA-\/Physics and Chemistry of Biological Systems/Modules/Advanced Programming/Exam/C++/Class/Doxygen/Test.cpp}}
+{\ttfamily \#include \char`\"{}B\+S\+T.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The file contains a demonstration of the functionality inside the Binary Search Tree class. In chronological order a \mbox{\hyperlink{class_b_s_t}{B\+ST}} class is constructed, data-\/pairs are inserted and the tree is cleared afterwards. Again data-\/pairs get inserted and Iterators begin()and end() are used to print all tree nodes. The Const\+Iterator is investigated regarding pre and post-\/increment operators. Commented lines can be enabled to see the read-\/only behaviour. The tree is cleared again and repopulated via the operator\mbox{[}\mbox{]}. The operator$<$$<$ is used to print the tree. A const \mbox{\hyperlink{class_b_s_t}{B\+ST}} instance is constructed and its operator\mbox{[}\mbox{]} and operator$<$$<$ are tested. The overwrite on insert() is checked. The functionality of find() is investigated and its returned iterator is checked. balance() is called for the non-\/const \mbox{\hyperlink{class_b_s_t}{B\+ST}} and it is printed multiple times to additionally test all copy and move semantics provided by the class. Commented lines can be enabled to see the causing of std\+::runtime\+\_\+error. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Test.cpp@{Test.cpp}!main@{main}}
+\index{main@{main}!Test.cpp@{Test.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+testing constructor\+: \mbox{\hyperlink{class_b_s_t}{B\+S\+T()}}
+
+testing function\+: void insert(const key k, value v)
+
+testing function\+: void clear()
+
+testing iterator functions\+: begin(), end(), cbegin(), cend()
+
+testing value\& operator\mbox{[}$\,$\mbox{]}(const keye\& k) non-\/const and const
+
+testing operator $<$$<$
+
+testing function\+: overwrite in void insert(const key k, value v)
+
+testing function\+: Const\+Iterator find(const key k)
+
+testing function\+: void balance()
+
+testing copy constructor
+
+testing copy assignment
+
+testing move constructor
+
+testing move assignment

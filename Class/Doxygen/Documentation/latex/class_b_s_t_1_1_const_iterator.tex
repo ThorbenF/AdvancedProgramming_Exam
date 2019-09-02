@@ -1,0 +1,71 @@
+\hypertarget{class_b_s_t_1_1_const_iterator}{}\doxysection{B\+ST$<$ key, value, comparator $>$\+::Const\+Iterator Class Reference}
+\label{class_b_s_t_1_1_const_iterator}\index{BST$<$ key, value, comparator $>$::ConstIterator@{BST$<$ key, value, comparator $>$::ConstIterator}}
+
+
+\mbox{\hyperlink{class_b_s_t_1_1_const_iterator}{Const\+Iterator}} is using the functionality of the \mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} class, but is preventing the accessed elements to be manipulated by returning \mbox{\hyperlink{class_b_s_t_1_1_const_iterator_ab5ddd11eba4590a965fc5052f8c4bbaa}{operator$\ast$() const}}.  
+
+
+
+
+{\ttfamily \#include $<$B\+S\+T.\+h$>$}
+
+Inheritance diagram for B\+ST$<$ key, value, comparator $>$\+::Const\+Iterator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_b_s_t_1_1_const_iterator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{class_b_s_t_1_1_const_iterator_adc71a0829d78fb8f0374ddd64ea6d416}{parent}} = const \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::\mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::pair$<$ const key, value $>$ \mbox{\hyperlink{class_b_s_t_1_1_const_iterator_ab5ddd11eba4590a965fc5052f8c4bbaa}{operator$\ast$}} () const
+\item 
+\mbox{\hyperlink{class_b_s_t_1_1_const_iterator_aac03881992b6d28825d0059e827b69dd}{Iterator}} (node $\ast$n)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} is constructed with a raw pointer to the current node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class key, class value, class comparator = decltype(\& Functor$<$const key,value$>$)$>$\newline
+class B\+S\+T$<$ key, value, comparator $>$\+::\+Const\+Iterator}
+
+\mbox{\hyperlink{class_b_s_t_1_1_const_iterator}{Const\+Iterator}} is using the functionality of the \mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} class, but is preventing the accessed elements to be manipulated by returning \mbox{\hyperlink{class_b_s_t_1_1_const_iterator_ab5ddd11eba4590a965fc5052f8c4bbaa}{operator$\ast$() const}}. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_b_s_t_1_1_const_iterator_adc71a0829d78fb8f0374ddd64ea6d416}\label{class_b_s_t_1_1_const_iterator_adc71a0829d78fb8f0374ddd64ea6d416}} 
+\index{BST$<$ key, value, comparator $>$::ConstIterator@{BST$<$ key, value, comparator $>$::ConstIterator}!parent@{parent}}
+\index{parent@{parent}!BST$<$ key, value, comparator $>$::ConstIterator@{BST$<$ key, value, comparator $>$::ConstIterator}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily template$<$class key, class value, class comparator = decltype(\& Functor$<$const key,value$>$)$>$ \\
+using \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::\mbox{\hyperlink{class_b_s_t_1_1_const_iterator_adc71a0829d78fb8f0374ddd64ea6d416}{Const\+Iterator\+::parent}} =  const \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$key, value, comparator$>$\+::\mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_s_t_1_1_const_iterator_aac03881992b6d28825d0059e827b69dd}\label{class_b_s_t_1_1_const_iterator_aac03881992b6d28825d0059e827b69dd}} 
+\index{BST$<$ key, value, comparator $>$::ConstIterator@{BST$<$ key, value, comparator $>$::ConstIterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!BST$<$ key, value, comparator $>$::ConstIterator@{BST$<$ key, value, comparator $>$::ConstIterator}}
+\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}}
+{\footnotesize\ttfamily template$<$class key, class value, class comparator = decltype(\& Functor$<$const key,value$>$)$>$ \\
+\mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::Iterator\+::\+Iterator\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_b_s_t_1_1_iterator}{Iterator}} is constructed with a raw pointer to the current node. 
+
+\mbox{\Hypertarget{class_b_s_t_1_1_const_iterator_ab5ddd11eba4590a965fc5052f8c4bbaa}\label{class_b_s_t_1_1_const_iterator_ab5ddd11eba4590a965fc5052f8c4bbaa}} 
+\index{BST$<$ key, value, comparator $>$::ConstIterator@{BST$<$ key, value, comparator $>$::ConstIterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!BST$<$ key, value, comparator $>$::ConstIterator@{BST$<$ key, value, comparator $>$::ConstIterator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$class key, class value, class comparator = decltype(\& Functor$<$const key,value$>$)$>$ \\
+std\+::pair$<$const key, value$>$ \mbox{\hyperlink{class_b_s_t}{B\+ST}}$<$ key, value, comparator $>$\+::Const\+Iterator\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Ph\+D course S\+I\+S\+S\+A-\/\+Physics and Chemistry of Biological Systems/\+Modules/\+Advanced Programming/\+Exam/\+C++/\+Class/\+Doxygen/\mbox{\hyperlink{_b_s_t_8h}{B\+S\+T.\+h}}\end{DoxyCompactItemize}
