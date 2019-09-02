@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy import stats
 
 
 def plot_times(node_number, log_N, map, BST_unbalanced, BST_balanced):
