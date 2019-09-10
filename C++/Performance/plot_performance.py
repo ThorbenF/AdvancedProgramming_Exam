@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def plot_times(node_number, log_N, map, BST_unbalanced, BST_balanced):
+def plot_times(node_number, map, BST_unbalanced, BST_balanced):
     plt.figure()
     x = np.arange(25, 10000000, 10)
     y = 20 * np.log(x)
@@ -23,7 +23,6 @@ def plot_times(node_number, log_N, map, BST_unbalanced, BST_balanced):
 def main():
 
     node_number = []
-    log_N = []
     map = []
     BST_unbalanced = []
     BST_balanced = []
@@ -35,12 +34,11 @@ def main():
         if count > 2:
             x = (count - 2) * stepsize
             node_number.append(x)
-            log_N.append(20 * np.log2(x))
             map.append(float(nums[0]))
             BST_unbalanced.append(float(nums[1]))
             BST_balanced.append(float(nums[2]))
 
-    plot_times(node_number, log_N, map, BST_unbalanced, BST_balanced)
+    plot_times(node_number, map, BST_unbalanced, BST_balanced)
 
 
 main()
