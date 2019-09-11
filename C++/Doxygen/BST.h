@@ -164,7 +164,7 @@ Iterator& operator++() {
                 node* temp_root= current_node->local_root;
                 while (temp_root != nullptr && current_node == temp_root->right.get()) {
                         current_node = temp_root;
-                        temp_root=current_node->local_root;;
+                        temp_root=current_node->local_root;
                 }
                 current_node=temp_root;
                 return *this;
